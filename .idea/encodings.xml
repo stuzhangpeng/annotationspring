@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" defaultCharsetForPropertiesFiles="GBK">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/itzhangpeng/aop/LogAspects.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/itzhangpeng/dao/UserDao.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/itzhangpeng/exceptionhanler/GlobalExceptionHanler.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/itzhangpeng/pojo/Person.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/itzhangpeng/pojo/Student.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/itzhangpeng/pojo/User.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/itzhangpeng/service/MathCaculater.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/itzhangpeng/service/UserService.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/index.jsp" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>
