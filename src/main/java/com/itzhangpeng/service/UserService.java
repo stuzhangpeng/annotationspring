@@ -39,15 +39,16 @@ public class UserService {
      *
      *     7、PROPAGATION_MANDATORY：如果没有，就抛出异常；如果有，就使用当前事务。
      */
-    @Transactional(propagation = Propagation.MANDATORY,
-            isolation = Isolation.REPEATABLE_READ ,rollbackFor =CustomizerException.class )
-    public void saveUser() throws CustomizerException {
+    @Transactional(propagation = Propagation.REQUIRED,
+            isolation = Isolation.REPEATABLE_READ  )
+    public void saveUser()  {
         userDao.saveUser(user);
+        throw new RuntimeException("jjjj");
         //事务默认抛出运行时异常和unchecked异常，事务才会回滚.抛出检查异常不会回滚
         //rollbackFor修改回滚的异常，抛出该异常会回滚
         //内部非事务方法调用内部事务方法。事务将失效，可以通过代理对象调用内部方法执行事务
         //expose-Proxy=true暴露代理对象，AopContext.currentProxy()来获取代理对象
-        throw new CustomizerException("自定义异常");
+       // throw new CustomizerException("自定义异常");
        /* try {
             //捕获异常
             throw new CustomizerException("自定义异常");
@@ -63,9 +64,13 @@ public class UserService {
 
     }
   @Transactional(propagation = Propagation.REQUIRED,
-         isolation = Isolation.REPEATABLE_READ ,rollbackFor =CustomizerException.class )
-    public void testTransction() throws CustomizerException {
-        ((UserService)AopContext.currentProxy()). saveUser();
+         isolation = Isolation.REPEATABLE_READ  )
+    public void testTransction() {
+        try {
+            ((UserService)AopContext.currentProxy()). saveUser();
+        }catch (Exception ex){
+            System.out.println(ex);
+        }
     }
     public void findUserById(Integer id){
 

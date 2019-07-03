@@ -54,6 +54,17 @@ public class HelloController {
        user.setAge(652);
        return  user;
     }
+    //测试ajax
+    @RequestMapping("/testAjax")
+    @ResponseBody
+    public User testAjax(HttpServletResponse response,String name,String password) throws IOException {
+        System.out.println(name);
+        System.out.println(password+"aaaaaaaaaaa");
+        User user =new User();
+        user.setName("张三");
+        user.setAge(652);
+        return  user;
+    }
     //测试string乱码
     @RequestMapping("/testStringEncoding")
     @ResponseBody
